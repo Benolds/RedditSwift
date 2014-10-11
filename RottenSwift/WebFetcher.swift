@@ -23,11 +23,11 @@ class WebFetcher : NSObject {
     
     func loadJsonFromUrlWithString(string: NSString) {
         
-        var url: NSURL? = NSURL(string: string)
+        var url: NSURL! = NSURL(string: string)
         
         func completionHandler(response: NSURLResponse!, data: NSData!, error: NSError!) ->() {
             
-            assert(!error,"*** Fetch Failed : double-check your url ***")
+            assert(error == nil,"*** Fetch Failed : double-check your url ***")
             
             receivedJson(data)
         }
@@ -39,7 +39,7 @@ class WebFetcher : NSObject {
         var error: NSErrorPointer = nil
         var jsonDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: error) as NSDictionary
         
-        assert(delegate,"*** WebFetcher's JsonReceiverDelegate is null: be sure you assigned it ***")
+        assert(delegate != nil,"*** WebFetcher's JsonReceiverDelegate is null: be sure you assigned it ***")
         
         delegate!.receiveJson(jsonDictionary)
     }

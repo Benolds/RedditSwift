@@ -57,22 +57,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         WebFetcher.sharedInstance.loadJsonFromUrlWithString(completeUrlString)
         
         var alertView = UIAlertView()
-        alertView.addButtonWithTitle("OK")
         alertView.title = "Fetching Data..."
-        alertView.message = "Refresh table view to see comments."
         alertView.show()
+      
+        // Dismisses alert after 1 second (dispatch_after takes in nanoseconds)
+        dispatch_after((1 * NSEC_PER_SEC), dispatch_get_main_queue(), {
+            alertView.dismissWithClickedButtonIndex(0, animated: true)
+        })
     }
     
     // This method is required by the UITableViewDelegate protocol
     func tableView (tableView : UITableView , cellForRowAtIndexPath indexPath : NSIndexPath) -> UITableViewCell {
         var cell : UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("uid") as? UITableViewCell
-        if (!cell) {
+        if (cell == nil) {
             cell = UITableViewCell()
-            cell!.textLabel.font = UIFont.systemFontOfSize(10)
+            cell!.textLabel?.font = UIFont.systemFontOfSize(10)
         }
         
         if (tableData.count > 0) {
-            cell!.textLabel.text = tableData.objectAtIndex(indexPath.row) as NSString
+            cell!.textLabel?.text = tableData.objectAtIndex(indexPath.row) as NSString
         }
         
         return cell!
@@ -80,7 +83,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // This method is required by the UITableViewDataSource protocol
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return tableData.count
     }
     
@@ -100,8 +102,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         tableData = bodyArray;
-        
-        table.reloadData()
+      
+        // reloadData needs to be called on the main thread or table won't show data until scrolled
+        dispatch_async(dispatch_get_main_queue(),{
+            self.table.reloadData()
+        });
     }
     
     // This method is required by UITextFieldDelegate
