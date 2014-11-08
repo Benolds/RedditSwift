@@ -12,19 +12,8 @@
 		ED8136D1197ADACA0085C7D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8136D0197ADACA0085C7D1 /* ViewController.swift */; };
 		ED8136D4197ADACA0085C7D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8136D2197ADACA0085C7D1 /* Main.storyboard */; };
 		ED8136D6197ADACA0085C7D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8136D5197ADACA0085C7D1 /* Images.xcassets */; };
-		ED8136E2197ADACA0085C7D1 /* RedditSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8136E1197ADACA0085C7D1 /* RedditSwiftTests.swift */; };
 		EDC7203E197BB9C000583CE0 /* WebFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC7203D197BB9C000583CE0 /* WebFetcher.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		ED8136DC197ADACA0085C7D1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ED8136C1197ADAC90085C7D1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ED8136C8197ADAC90085C7D1;
-			remoteInfo = RottenSwift;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		ED7F7D92197CDD970080F224 /* JsonReceiverDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonReceiverDelegate.swift; sourceTree = "<group>"; };
@@ -34,21 +23,11 @@
 		ED8136D0197ADACA0085C7D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED8136D3197ADACA0085C7D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED8136D5197ADACA0085C7D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ED8136DB197ADACA0085C7D1 /* RedditSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED8136E0197ADACA0085C7D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED8136E1197ADACA0085C7D1 /* RedditSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditSwiftTests.swift; sourceTree = "<group>"; };
 		EDC7203D197BB9C000583CE0 /* WebFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		ED8136C6197ADAC90085C7D1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ED8136D8197ADACA0085C7D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				ED8136CB197ADACA0085C7D1 /* RedditSwift */,
-				ED8136DE197ADACA0085C7D1 /* RedditSwiftTests */,
 				ED8136CA197ADACA0085C7D1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				ED8136C9197ADACA0085C7D1 /* RedditSwift.app */,
-				ED8136DB197ADACA0085C7D1 /* RedditSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,24 +76,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		ED8136DE197ADACA0085C7D1 /* RedditSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				ED8136E1197ADACA0085C7D1 /* RedditSwiftTests.swift */,
-				ED8136DF197ADACA0085C7D1 /* Supporting Files */,
-			);
-			name = RedditSwiftTests;
-			path = RottenSwiftTests;
-			sourceTree = "<group>";
-		};
-		ED8136DF197ADACA0085C7D1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				ED8136E0197ADACA0085C7D1 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,24 +96,6 @@
 			productReference = ED8136C9197ADACA0085C7D1 /* RedditSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ED8136DA197ADACA0085C7D1 /* RedditSwiftTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ED8136E8197ADACA0085C7D1 /* Build configuration list for PBXNativeTarget "RedditSwiftTests" */;
-			buildPhases = (
-				ED8136D7197ADACA0085C7D1 /* Sources */,
-				ED8136D8197ADACA0085C7D1 /* Frameworks */,
-				ED8136D9197ADACA0085C7D1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ED8136DD197ADACA0085C7D1 /* PBXTargetDependency */,
-			);
-			name = RedditSwiftTests;
-			productName = RottenSwiftTests;
-			productReference = ED8136DB197ADACA0085C7D1 /* RedditSwiftTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -166,10 +107,6 @@
 				TargetAttributes = {
 					ED8136C8197ADAC90085C7D1 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					ED8136DA197ADACA0085C7D1 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = ED8136C8197ADAC90085C7D1;
 					};
 				};
 			};
@@ -187,7 +124,6 @@
 			projectRoot = "";
 			targets = (
 				ED8136C8197ADAC90085C7D1 /* RedditSwift */,
-				ED8136DA197ADACA0085C7D1 /* RedditSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,13 +135,6 @@
 			files = (
 				ED8136D4197ADACA0085C7D1 /* Main.storyboard in Resources */,
 				ED8136D6197ADACA0085C7D1 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ED8136D9197ADACA0085C7D1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,23 +152,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED8136D7197ADACA0085C7D1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED8136E2197ADACA0085C7D1 /* RedditSwiftTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		ED8136DD197ADACA0085C7D1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ED8136C8197ADAC90085C7D1 /* RedditSwift */;
-			targetProxy = ED8136DC197ADACA0085C7D1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ED8136D2197ADACA0085C7D1 /* Main.storyboard */ = {
@@ -352,42 +265,6 @@
 			};
 			name = Release;
 		};
-		ED8136E9197ADACA0085C7D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RottenSwift.app/RottenSwift";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RottenSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = RedditSwiftTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		ED8136EA197ADACA0085C7D1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RottenSwift.app/RottenSwift";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RottenSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = RedditSwiftTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -405,15 +282,6 @@
 			buildConfigurations = (
 				ED8136E6197ADACA0085C7D1 /* Debug */,
 				ED8136E7197ADACA0085C7D1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ED8136E8197ADACA0085C7D1 /* Build configuration list for PBXNativeTarget "RedditSwiftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ED8136E9197ADACA0085C7D1 /* Debug */,
-				ED8136EA197ADACA0085C7D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
